@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <conio.h>
+
+struct sv
+{
+	char maso[10];
+	char ht[25];
+	float dtb;
+};
+
+void main()
+{
+	int i, n;
+	float d;
+	sv bg;
+	FILE * f;
+	clrscr();
+	f = fopen("HosoSV.DAT", "w+b");
+		bg.dtb = d;
+		fwrite(&bg, sizeof(sv), 1, f);
+	}
+
+	fclose(f);
+	f = fopen("HosoSV.DAT", "rb");
+	fread(&n, sizeof(int), 1, f);
+	clrscr();
+	gotoxy(10, 1);
+	printf("Danh sach sinh vien\n\n");
+	fclose(f);
+	printf("\nGo Enter ket thuc ...");
+	getch();
+}
